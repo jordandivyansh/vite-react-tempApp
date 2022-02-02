@@ -1,7 +1,24 @@
-import reactRefresh from '@vitejs/plugin-react-refresh'
+import react from '@vitejs/plugin-react'
 import { defineConfig } from 'vite'
-
-// https://vitejs.dev/config/
+import dts from 'vite-plugin-dts'
+// // https://vitejs.dev/config/
 export default defineConfig({
-  plugins: [reactRefresh()],
+  plugins: [react(), dts()],
+  build: {
+    lib: {
+      entry: './src/main.tsx',
+      name: 'hubilo',
+      // formats: ["cjs", "es"],
+      fileName: (format) => `index.${format}.js`,
+    },
+    rollupOptions: {
+      output: {
+        inlineDynamicImports: true,
+      },
+      external: ['react', 'react-dom'],
+    },
+  },
+  define: {
+    'process.env': {},
+  },
 })

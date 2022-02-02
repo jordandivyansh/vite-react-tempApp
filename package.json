@@ -9,8 +9,11 @@
     "test": "jest"
   },
   "dependencies": {
+    "@vitejs/plugin-react": "^1.1.4",
     "react": "^17.0.2",
-    "react-dom": "^17.0.2"
+    "react-dom": "^17.0.2",
+    "vite-plugin-dts": "^0.9.9",
+    "vite-plugin-react": "^4.0.1"
   },
   "devDependencies": {
     "@babel/core": "^7.16.0",
@@ -18,7 +21,7 @@
     "@babel/preset-typescript": "^7.16.0",
     "@testing-library/react": "^12.1.2",
     "@types/jest": "^27.0.3",
-    "@types/react": "^17.0.37",
+    "@types/react": "^17.0.38",
     "@types/react-dom": "^17.0.11",
     "@typescript-eslint/eslint-plugin": "^5.5.0",
     "@typescript-eslint/parser": "^5.5.0",
